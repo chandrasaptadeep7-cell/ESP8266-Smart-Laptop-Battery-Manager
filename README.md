@@ -15,13 +15,18 @@
       Configurable charging thresholds
       Real-time automation
 
-# Hardware Used
-      | Component | Purpose |
-      | :--- | :--- |
-      | ESP8266 NodeMCU | IoT Controller |
-      | Relay Module | Charger ON/OFF |
-      | Laptop | Battery Monitoring |
-      | Wi-Fi Router | Communication |
+## Software Components
+
+| Software / Library | Purpose |
+| :--- | :--- |
+| **Python 3** | Main application for battery monitoring and automation logic. |
+| **psutil** | Retrieves the laptop's battery percentage and charging status. |
+| **requests** | Sends HTTP POST requests to the ESP8266. |
+| **Arduino IDE** | Used to develop and upload firmware to the ESP8266. |
+| **ESP8266WiFi** | Connects the ESP8266 to the local Wi-Fi network. |
+| **ESP8266WebServer** | Implements the embedded HTTP server that receives control commands. |
+| **ESP8266mDNS** | Enables hostname-based access (`esp8266.local`) without using a fixed IP address. |
+| **Embedded C++** | Programming language used for developing the ESP8266 firmware. |
 
 # Software Used
     Python libraries: 
