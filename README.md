@@ -24,7 +24,7 @@
 
 # Software Used
    ** Python libraries: 
-        * Python.
+        * Python.\n
         * psutil.
         * requests.
         
