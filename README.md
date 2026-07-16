@@ -38,12 +38,12 @@
 
 
 # Communication Flow
-   Step-by-step explanation:
-   Python reads battery percentage of the laptop.
-   Sends HTTP request to Esp8266.
-   ESP8266 receives request.
-   Relay switches charger.
-   System repeats in infinite loop.
+      Step-by-step explanation:
+      Python reads battery percentage of the laptop.
+      Sends HTTP request to Esp8266.
+      ESP8266 receives request.
+      Relay switches charger.
+      System repeats in infinite loop.
 
 # Working Principle
    * Connectivity: The ESP8266 and the laptop are synchronized via a local Wi-Fi network.
@@ -54,21 +54,21 @@
                At ≤35%: The script instructs the ESP8266 to release the relay, enabling the charging circuit.
      
 # Technical Highlights
-   Python Automation
-   Embedded C/C++
-   HTTP Client-Server Communication
-   REST API
-   Embedded Networking
-   IoT
-   mDNS
-   GPIO Programming
-   Relay Interfacing
-   Error Handling
-   Wi-Fi Communication
+      Python Automation
+      Embedded C/C++
+      HTTP Client-Server Communication
+      REST API
+      Embedded Networking
+      IoT
+      mDNS
+      GPIO Programming
+      Relay Interfacing
+      Error Handling
+      Wi-Fi Communication
 
 # Challenges Faced
-   Network timeout handling
-   Reliable Wi-Fi reconnection
-   While communication through IP address
+      Network timeout handling
+      Reliable Wi-Fi reconnection
+      While communication through IP address
   
 
