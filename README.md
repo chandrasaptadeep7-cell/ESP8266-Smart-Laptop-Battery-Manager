@@ -20,11 +20,11 @@
    Relay Module for Charger ON/OFF.
    Laptop for Battery Monitoring.
    Wi-Fi Router for  Communication.
-   220v AC to 5v converter (Old mobile charging module).
+   220v AC to 5v converter (Old mobile charging board).
 
 # Software Used
    Python libraries- 
-        Python 3.
+        Python.
         psutil.
         requests.
         
@@ -55,17 +55,18 @@
      
 # Technical Highlights
    Python Automation
-   Embedded C++
+   Embedded C/C++
    HTTP Client-Server Communication
    REST API
    Embedded Networking
+   IoT
    mDNS
    GPIO Programming
    Relay Interfacing
    Error Handling
    Wi-Fi Communication
 
-# Challenges & Lessons Learned
+# Challenges Faced
    Network timeout handling
    Reliable Wi-Fi reconnection
    While communication through IP address
