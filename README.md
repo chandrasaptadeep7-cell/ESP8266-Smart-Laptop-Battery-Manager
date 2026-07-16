@@ -33,8 +33,12 @@
      * ESP8266WebServer.
      * ESP8266mDNS.
 
-# System Architecture
-**   COMING SOON**
+# Documents
+The repository includes:
+1) Circuit Diagram
+2) Block Diagram
+3) Source Code
+4) Working Manual
 
 
 # Communication Flow
