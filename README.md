@@ -46,9 +46,9 @@ Add an architecture diagram.
    System repeats in infinite loop.
 
 # Working Principle
-   Connectivity: The ESP8266 and the laptop are synchronized via a local Wi-Fi network.
+   * Connectivity: The ESP8266 and the laptop are synchronized via a local Wi-Fi network.
    
-   Monitoring: A Python script tracks battery percentage in real-time.
+   * Monitoring: A Python script tracks battery percentage in real-time.
    
-   Automation: At ≥95%: The script sends an HTTP request to the ESP8266 to trip the relay and stop charging.
+   * Automation: At ≥95%: The script sends an HTTP request to the ESP8266 to trip the relay and stop charging.
                At ≤35%: The script instructs the ESP8266 to release the relay, enabling the charging circuit.
