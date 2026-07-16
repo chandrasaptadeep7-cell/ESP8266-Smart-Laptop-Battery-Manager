@@ -39,20 +39,19 @@
 | **Wi-Fi Router / Local Network** | Provides wireless communication between the laptop and the ESP8266 using HTTP requests. |
 
 # Documents
-      The repository includes:
-      1) Circuit Diagram
-      2) Block Diagram
-      3) Source Code
-      4) Working Manual
+   The repository includes:
+   1) Circuit Diagram
+   2) Block Diagram
+   3) Source Code
+   4) Working Manual
 
 
 # Communication Flow
-   1) Step-by-step explanation:
-   2) Python reads battery percentage of the laptop.
-   3) Sends HTTP request to Esp8266.
-   4) ESP8266 receives request.
-   5) Relay switches charger.
-   6) System repeats in infinite loop.
+   1) Python reads battery percentage of the laptop.
+   2) Sends HTTP request to Esp8266.
+   3) ESP8266 receives request.
+   4) Relay switches charger.
+   5) System repeats in infinite loop.
 
 # Working Principle
    * Connectivity: The ESP8266 and the laptop are synchronized via a local Wi-Fi network.
@@ -63,21 +62,21 @@
                At ≤35%: The script instructs the ESP8266 to release the relay, enabling the charging circuit.
      
 # Technical Highlights
-      Python Automation
-      Embedded C/C++
-      HTTP Client-Server Communication
-      REST API
-      Embedded Networking
-      IoT
-      mDNS
-      GPIO Programming
-      Relay Interfacing
-      Error Handling
-      Wi-Fi Communication
+   1) Python Automation
+   2) Embedded C/C++
+   3) HTTP Client-Server Communication
+   4) REST API
+   5) Embedded Networking
+   6) IoT
+   7) mDNS
+   8) GPIO Programming
+   9) Relay Interfacing
+   10) Error Handling
+   11) Wi-Fi Communication
 
 # Challenges Faced
-      Network timeout handling
-      Reliable Wi-Fi reconnection
-      While communication through IP address
-  
+   1) Network timeout handling
+   2) Reliable Wi-Fi reconnection
+   3) While communication through IP address
+
 
