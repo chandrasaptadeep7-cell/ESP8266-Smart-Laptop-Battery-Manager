@@ -7,13 +7,13 @@
    An automated battery management system that utilizes an ESP8266-controlled relay to regulate charging based on laptop battery thresholds. The system achieves autonomous power control via a     Python-based agent, effectively minimizing thermal and electrical stress on the battery to improve overall hardware lifespan.
    
 # Key Features
-      Automatic battery monitoring
-      Relay-based charging control
-      Wi-Fi communication
-      HTTP server on ESP8266
-      mDNS support
-      Configurable charging thresholds
-      Real-time automation
+ 1)  Automatic battery monitoring
+ 2)  Relay-based charging control
+ 3)  Wi-Fi communication
+ 4)  HTTP server on ESP8266
+ 5)  mDNS support
+ 6)  Configurable charging thresholds
+ 7)  Real-time automation
 
 ## Software Components
 
