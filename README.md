@@ -20,6 +20,7 @@
    Relay Module for Charger ON/OFF.
    Laptop for Battery Monitoring.
    Wi-Fi Router for  Communication.
+   220v AC to 5v converter (Old mobile charging module).
 
 # Software Used
    Python libraries.
