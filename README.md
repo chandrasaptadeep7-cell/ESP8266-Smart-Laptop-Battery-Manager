@@ -28,16 +28,14 @@
 | **ESP8266mDNS** | Enables hostname-based access (`esp8266.local`) without using a fixed IP address. |
 | **Embedded C++** | Programming language used for developing the ESP8266 firmware. |
 
-# Software Used
-    Python libraries: 
-     * Python.   
-     * psutil.
-     * requests.
-        
-    Libreries used for the Embedded Firmware: 
-     * ESP8266WiFi.
-     * ESP8266WebServer.
-     * ESP8266mDNS.
+## Hardware Components
+
+| Component | Purpose |
+| :--- | :--- |
+| **ESP8266 NodeMCU** | Acts as the IoT controller by hosting an HTTP server, processing incoming commands, and controlling the relay module. |
+| **Relay Module (1-Channel)** | Connects or disconnects the laptop charger based on commands received from the ESP8266. |
+| **Laptop** | Runs the Python application that monitors battery status and communicates with the ESP8266 over Wi-Fi. |
+| **Wi-Fi Router / Local Network** | Provides wireless communication between the laptop and the ESP8266 using HTTP requests. |
 
 # Documents
       The repository includes:
