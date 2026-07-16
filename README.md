@@ -4,7 +4,7 @@
    This project demonstrates Python-to-Hardware communication, embedded firmware development, and IoT networking.
 
 # Project Overview
-   The Smart-Charge Manager is an IoT-based power management solution designed to extend the lifespan of legacy lithium-ion battery cells by enforcing precise, user-defined charging thresholds. While modern operating systems often lack granular control over charge termination, this system provides a hardware-level override to prevent the accelerated chemical degradation caused by maintaining batteries at full capacity for extended periods. The system architecture is divided into three distinct layers: a monitoring layer, where a Python-based background service utilizes the psutil library for real-time telemetry polling; a communication layer, which transmits state-change commands via a RESTful API over a local Wi-Fi network; and a control layer, where an ESP8266 (Wemos D1 Mini) acts as the edge controller to physically actuate a relay module. By adopting this hardware-in-the-loop approach, the project demonstrates a robust implementation of cross-platform integration and distributed system control. Ultimately, the system serves as both a practical tool for hardware preservation and a technical showcase of proficiency in bridging high-level software logic with low-level embedded firmware, highlighting an ability to design modular, reliable, and purpose-driven IoT solutions.
+   An automated battery management system that utilizes an ESP8266-controlled relay to regulate charging based on laptop battery thresholds. The system achieves autonomous power control via a     Python-based agent, effectively minimizing thermal and electrical stress on the battery to improve overall hardware lifespan.
    
 # Key Features
       Automatic battery monitoring
@@ -16,11 +16,12 @@
       Real-time automation
 
 # Hardware Used
-      ESP8266 NodeMCU for IoT Controller.
-      Relay Module for Charger ON/OFF.
-      Laptop for Battery Monitoring.
-      Wi-Fi Router for  Communication.
-      220v AC to 5v converter (Old mobile charging board).
+      | Component | Purpose |
+      | :--- | :--- |
+      | ESP8266 NodeMCU | IoT Controller |
+      | Relay Module | Charger ON/OFF |
+      | Laptop | Battery Monitoring |
+      | Wi-Fi Router | Communication |
 
 # Software Used
     Python libraries: 
