@@ -33,8 +33,7 @@
         ESP8266mDNS
 
 # System Architecture
-Explain how the laptop and ESP8266 communicate.
-Add an architecture diagram.
+**   COMING SOON**
 
 
 # Communication Flow
@@ -52,3 +51,22 @@ Add an architecture diagram.
    
    * Automation: At ≥95%: The script sends an HTTP request to the ESP8266 to trip the relay and stop charging.
                At ≤35%: The script instructs the ESP8266 to release the relay, enabling the charging circuit.
+     
+# Technical Highlights
+   Python Automation
+   Embedded C++
+   HTTP Client-Server Communication
+   REST API
+   Embedded Networking
+   mDNS
+   GPIO Programming
+   Relay Interfacing
+   Error Handling
+   Wi-Fi Communication
+
+# Challenges & Lessons Learned
+   Network timeout handling
+   Reliable Wi-Fi reconnection
+   While communication through IP address
+  
+
