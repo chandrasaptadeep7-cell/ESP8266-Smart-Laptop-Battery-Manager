@@ -47,12 +47,12 @@
 
 
 # Communication Flow
-      Step-by-step explanation:
-      Python reads battery percentage of the laptop.
-      Sends HTTP request to Esp8266.
-      ESP8266 receives request.
-      Relay switches charger.
-      System repeats in infinite loop.
+   1) Step-by-step explanation:
+   2) Python reads battery percentage of the laptop.
+   3) Sends HTTP request to Esp8266.
+   4) ESP8266 receives request.
+   5) Relay switches charger.
+   6) System repeats in infinite loop.
 
 # Working Principle
    * Connectivity: The ESP8266 and the laptop are synchronized via a local Wi-Fi network.
