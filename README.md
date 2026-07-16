@@ -34,11 +34,11 @@
      * ESP8266mDNS.
 
 # Documents
-The repository includes:
-1) Circuit Diagram
-2) Block Diagram
-3) Source Code
-4) Working Manual
+      The repository includes:
+      1) Circuit Diagram
+      2) Block Diagram
+      3) Source Code
+      4) Working Manual
 
 
 # Communication Flow
