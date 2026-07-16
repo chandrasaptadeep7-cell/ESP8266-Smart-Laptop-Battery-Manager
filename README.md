@@ -24,14 +24,14 @@
 
 # Software Used
    Python libraries- 
-        Python.
-        psutil.
-        requests.
+        * Python.
+        * psutil.
+        * requests.
         
    Libreries used for the Embedded Firmware -
-        ESP8266WiFi.
-        ESP8266WebServer.
-        ESP8266mDNS.
+        * ESP8266WiFi.
+        * ESP8266WebServer.
+        * ESP8266mDNS.
 
 # System Architecture
 **   COMING SOON**
