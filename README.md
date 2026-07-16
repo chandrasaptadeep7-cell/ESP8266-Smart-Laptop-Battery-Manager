@@ -23,15 +23,15 @@
    220v AC to 5v converter (Old mobile charging module).
 
 # Software Used
-   Python libraries.
-        Python 3
-        psutil
-        requests
+   Python libraries- 
+        Python 3.
+        psutil.
+        requests.
         
-   Libreries used for the Embedded Firmware
-        ESP8266WiFi
-        ESP8266WebServer
-        ESP8266mDNS
+   Libreries used for the Embedded Firmware -
+        ESP8266WiFi.
+        ESP8266WebServer.
+        ESP8266mDNS.
 
 # System Architecture
 **   COMING SOON**
