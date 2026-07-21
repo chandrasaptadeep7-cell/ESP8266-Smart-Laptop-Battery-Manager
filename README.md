@@ -53,7 +53,7 @@
    4) Relay switches charger.
    5) System repeats in infinite loop.
 
-# Working Principle
+# Working Overview
    * Connectivity: The ESP8266 and the laptop are synchronized via a local Wi-Fi network.
    
    * Monitoring: A Python script tracks battery percentage in real-time.
