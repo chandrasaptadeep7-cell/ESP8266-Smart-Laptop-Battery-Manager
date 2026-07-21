@@ -79,7 +79,4 @@
    2) Reliable Wi-Fi reconnection
    3) While communication through IP address
 
-  | HTTP Endpoint | Function |
-    | :--- | :--- |
-    | **/high** | Disconnects the laptop charger by changing the relay state. |
-    | **/low** | Reconnects the laptop charger by restoring the relay state. |
+
