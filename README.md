@@ -1,5 +1,5 @@
 # Python ESP8266 Laptop Charging Control
-   IoT-based laptop battery charging cutoff system using Python and ESP8266. Automatically controls charger state over Wi-Fi based on battery percentage to improve battery longevity.
+   Python-based desktop application that communicates with an ESP8266 over Wi-Fi to automate external laptop charger control based on battery percentage. Developed to demonstrate hardware-software integration, HTTP networking, and embedded IoT programming.
    An IoT-based battery management system that automatically controls a laptop charger using Python and an ESP8266 over Wi-Fi based on real-time battery percentage.
    This project demonstrates Python-to-Hardware communication, embedded firmware development, and IoT networking. I built a prototype to demonstrate hardware-software integration using Python     and ESP8266. The battery percentage served as a real-world event source to automate charger control over Wi-Fi.
 
@@ -78,5 +78,11 @@
    1) Network timeout handling
    2) Reliable Wi-Fi reconnection
    3) While communication through IP address
+# Limitations
+   1) Requires Wi-Fi connectivity.
+   2) No authentication for HTTP requests.
+   3) Single-client design.
+   4) No watchdog recovery if ESP8266 hangs.
+   5) Battery percentage polling interval could be optimized.
 
 
