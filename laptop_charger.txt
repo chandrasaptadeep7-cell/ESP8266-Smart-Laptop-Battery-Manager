@@ -1,0 +1,81 @@
+1. Battery Monitoring Layer
+
+    The Battery Monitoring Layer is responsible for continuously monitoring the laptop's battery status and making charging decisions based on 
+    predefined threshold valuesA Python application periodically retrieves the battery percentage and charging status using the psutil 
+    library. The monitoring process runs continuously in the background, checking the battery every 10 seconds.
+
+    During each monitoring cycle, the application performs the following operations:
+        1. Reads the current battery percentage.
+        2. Determines whether the laptop is currently connected to the charger or not.
+        3. Compares the battery percentage against the predefined charging thresholds (High and Low).
+        4. Decides whether a charging control command should be sent to the ESP8266.
+
+    If the battery percentage reaches the High Threshold (90%) while the laptop is charging, the application sends an HTTP "POST" request to 
+    the ESP8266 to disconnect the charger. Similarly, if the battery percentage falls below the Low Threshold (35%) while the laptop is not charging,
+    another HTTP "POST" request is sent to reconnect the charger. The threshold values are defined as configurable constants in the Python application, 
+    allowing the charging behavior to be easily customized without modifying the core program logic.
+
+    To improve reliability, all network communication is enclosed within exception handling so that temporary network failures or communication 
+    errors do not terminate the monitoring application.
+
+
+2. Decision Logic
+
+    The Decision Logic Layer evaluates the battery status obtained from the Battery Monitoring Layer and determines
+    whether the laptop charger should remain connected or be disconnected.
+    The charging process is controlled using two configurable threshold values:
+        - High Threshold: 90%
+        - Low Threshold: 35%
+
+    The decision-making process follows these rules:
+        - If the battery percentage reaches or exceeds the High Threshold (90%) while the laptop is charging,
+            the Python application sends an HTTP POST request to the ESP8266 to disconnect the charger.
+        - If the battery percentage falls to or below the Low Threshold (35%) while the laptop is not charging, the
+            Python application sends another HTTP POST request to reconnect the charger.
+
+    This threshold-based approach minimizes unnecessary charging cycles while ensuring that the battery remains within a predefined 
+    operating range. The threshold values are configurable and can be modified to suit different battery management requirements.
+
+3. Communication Layer
+
+    The Communication Layer establishes wireless communication between the Python application running on the laptop and the ESP8266 microcontroller
+    over the local Wi-Fi network. The Python application uses the **requests** library to transmit HTTP **POST** requests whenever a charging state 
+    change is required. Instead of using a fixed IP address, the system utilizes **mDNS (Multicast DNS)**, allowing the ESP8266 to be accessed
+    using the hostname:
+
+                        "http://esp8266.local"
+
+    The ESP8266 hosts an embedded HTTP server that listens for the following endpoints such as, "/high"  Disconnects the laptop charger by changing
+    the relay state. "/low"  Reconnects the laptop charger by restoring the relay state. After executing each command, the ESP8266 returns an HTTP 200 OK
+    response to acknowledge successful execution. Using mDNS eliminates  the need to manually update the IP address whenever the router assigns a new 
+    DHCP address to the ESP8266.
+
+4. Embedded Controller Operation
+    The ESP8266 functions as the embedded controller responsible for receiving charging commands and controlling the relay module.
+    During system initialization, the ESP8266:
+        - Connects to the configured Wi-Fi network.
+        - Starts an embedded HTTP server.
+        - Registers the mDNS hostname (`esp8266.local`).
+        - Configures the relay GPIO pin as an output.
+        - Initializes the relay to a safe default state.
+
+    Once initialized, the ESP8266 continuously listens for incoming HTTP requests. When a POST request is received:
+        - A request to **/high** sets the relay output LOW, disconnecting the laptop charger.
+        - A request to **/low** sets the relay output HIGH, reconnecting the laptop charger.
+
+    The firmware continuously services incoming HTTP requests while also monitoring the Wi-Fi connection. If the Wi-Fi connection is
+    interrupted, the ESP8266 remains in a reconnection loop until network connectivity is restored, ensuring reliable system operation.
+
+5. Relay Control
+
+    The Relay Control Layer provides the physical interface between the embedded controller and the laptop charger.
+    The relay module is connected to one of the ESP8266's GPIO pins and acts as an electrically controlled switch.
+
+    Depending on the command received from the Python application:
+
+        - The relay disconnects the charger when the battery reaches the **High Threshold**, preventing further charging.
+        - The relay reconnects the charger when the battery falls below the **Low Threshold**, allowing charging to resume.
+
+    This hardware abstraction enables the ESP8266 to safely control the charging process while electrically isolating the low-voltage control circuitry from the external power circuit.
+
+    The relay operates automatically without requiring any user intervention, enabling continuous battery management based on real-time battery conditions.
