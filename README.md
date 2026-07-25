@@ -1,7 +1,7 @@
 # ESP8266-Smart-Laptop-Battery-Manager
    IoT-based laptop battery charging cutoff system using Python and ESP8266. Automatically controls charger state over Wi-Fi based on battery percentage to improve battery longevity.
    An IoT-based battery management system that automatically controls a laptop charger using Python and an ESP8266 over Wi-Fi based on real-time battery percentage.
-   This project demonstrates Python-to-Hardware communication, embedded firmware development, and IoT networking. This is not the replacement of current laptop BMS technology, it is just an       projects that teaches about many IoT concepts.
+   This project demonstrates Python-to-Hardware communication, embedded firmware development, and IoT networking. I built a prototype to demonstrate hardware-software integration using Python     and ESP8266. The battery percentage served as a real-world event source to automate charger control over Wi-Fi.
 
 # Project Overview
    An automated battery management system that utilizes an ESP8266-controlled relay to regulate charging based on laptop battery thresholds. The system achieves autonomous power control via a     Python-based agent, effectively minimizing thermal and electrical stress on the battery to improve overall hardware lifespan.
