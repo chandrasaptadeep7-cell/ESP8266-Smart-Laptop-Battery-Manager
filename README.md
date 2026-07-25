@@ -41,7 +41,7 @@
 # Documents
    The repository includes:
    1) Circuit Diagram
-   2) Block Diagram
+   2) Pictures
    3) Source Code
    4) Working Manual
 
